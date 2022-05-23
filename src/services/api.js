@@ -8,7 +8,7 @@ function createConfig(token) {
   };
 }
 
-const REACT_APP_BASE_URL = process.env.REACT_APP_BASE_URL;
+const REACT_APP_BASE_URL = "https://clinica-rebeca-vaz.herokuapp.com";
 
 async function signin(data) {
   const token = await axios.post(`${REACT_APP_BASE_URL}/sign-in`, data);
