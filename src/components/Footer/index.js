@@ -11,25 +11,32 @@ export default function Footer() {
         width="100%"
         height="250"
         style={{ border: 0 }}
-        allowfullscreen=""
+        allowFullScreen=""
         loading="lazy"
-        referrerpolicy="no-referrer-when-downgrade"
+        referrerPolicy="no-referrer-when-downgrade"
+        title="map"
       ></iframe>
       <Container>
         <Contato>
           <h1>Contatos</h1>
-          <p>email:Rebecavazfisio@gmail.com</p>
+          <p>email:rebecavazfisio@gmail.com</p>
           <p>Numero:(86)99954-7775</p>
         </Contato>
         <Social>
-          <a href="globo.com" target="_blank">
-            <img src={instagram} alt="Instagram" />
+          <a href="https://www.instagram.com/clinicarebecavaz/" target="blank">
+            <img src={instagram} alt="instagram" />
           </a>
-          <a href="globo.com" target="_blank">
-            <img src={facebook} alt="Instagram" />
+          <a
+            href="https://www.facebook.com/Cl%C3%ADnica-Rebeca-Vaz-101129372575058/"
+            target="blank"
+          >
+            <img src={facebook} alt="facebook" />
           </a>
-          <a href="globo.com" target="_blank">
-            <img src={whatsapp} alt="Instagram" />
+          <a
+            href="https://api.whatsapp.com/send?phone=5586999348656"
+            target="blank"
+          >
+            <img src={whatsapp} alt="whatsapp" />
           </a>
         </Social>
       </Container>

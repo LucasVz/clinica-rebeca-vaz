@@ -10,13 +10,13 @@ export default function Homepage() {
       <Menu></Menu>
       <Container>
         <ContainerContact>
-          <Text>Clinica estetica de armonização corporal</Text>
+          <Text>Rebeca Vaz, especialista em armonização corporal</Text>
           <Button
             target="blank"
             href="https://api.whatsapp.com/send?phone=5586999348656&text=agendando%20consulta"
             variant="success"
           >
-            Fale conosco
+            Agende sua consulta
           </Button>{" "}
         </ContainerContact>
         <Img src={picture} alt="foto da rebeca" />

@@ -1,6 +1,6 @@
 import Menu from "../../components/Menu";
 import Footer from "../../components/Footer";
-import { Container, Img, Text } from "../Homepage/style";
+import { Container, Img, Text } from "./style";
 import picture from "../../assets/rebeca.png";
 
 export default function AboutUs() {

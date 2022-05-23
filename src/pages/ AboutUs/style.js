@@ -12,9 +12,29 @@ const Container = styled.div`
   background-image: url(${background});
   height: 600px;
   padding-left: 20%;
+  @media (max-width: 1100px) {
+    padding-left: 10%;
+    height: 500px;
+  }
   @media (max-width: 600px) {
     padding-left: 10%;
     height: 300px;
+  }
+`;
+
+const Text = styled.p`
+  color: #ffffff;
+  width: 60%;
+  font-size: 28px;
+
+  padding-bottom: 15px;
+
+  @media (max-width: 1100px) {
+    font-size: 22px;
+  }
+
+  @media (max-width: 600px) {
+    font-size: 16px;
   }
 
   animation: fadeInAnimation ease 2s;
@@ -28,34 +48,22 @@ const Container = styled.div`
   }
 `;
 
-const ContainerContact = styled.div`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  @media (max-width: 600px) {
-    align-items: flex-start;
-  }
-  width: 60%;
-`;
-
-const Text = styled.p`
-  color: #ffffff;
-
-  font-size: 32px;
-  padding-bottom: 15px;
-
-  @media (max-width: 600px) {
-    font-size: 22px;
-  }
-`;
-
 const Img = styled.img`
   object-fit: cover;
   width: auto;
   height: 100%;
   position: absolute;
   right: 0;
+
+  animation: fadeInAnimation ease 2s;
+  @keyframes fadeInAnimation {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
 `;
 
-export { Container, Img, Text, ContainerContact };
+export { Container, Img, Text };

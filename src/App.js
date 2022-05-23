@@ -4,24 +4,24 @@ import Homepage from "./pages/Homepage";
 import AboutUs from "./pages/ AboutUs";
 import Login from "./pages/Login";
 import AdminServices from "./pages/AdminServices";
-
+import { ServiceProvider } from "./context/serviceContext";
 import { AuthProvider } from "./context/authContext";
-import { UserProvider } from "./context/userContext";
+import PageService from "./pages/PageService";
 
 export default function App() {
-  const [user, setUser] = useState();
   return (
     <AuthProvider>
-      <UserProvider user={user} setUser={setUser}>
+      <ServiceProvider>
         <BrowserRouter>
           <Routes>
             <Route path="/" element={<Homepage />} />
             <Route path="/quem-somos" element={<AboutUs />} />
             <Route path="/admin" element={<Login />} />
             <Route path="/admin-services" element={<AdminServices />} />
+            <Route path="/servicos" element={<PageService />} />
           </Routes>
         </BrowserRouter>
-      </UserProvider>
+      </ServiceProvider>
     </AuthProvider>
   );
 }

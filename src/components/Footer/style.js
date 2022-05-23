@@ -45,6 +45,10 @@ const Social = styled.div`
     height: auto;
     margin: 0 10px;
   }
+  img:hover {
+    width: 45px;
+    transition: step-end;
+  }
 `;
 
 export { Container, Contato, Social, Text };

@@ -3,7 +3,6 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import styled from "styled-components";
 import React, { useEffect, useState } from "react";
 import useAuth from "../../hooks/useAuth";
-import useUser from "../../hooks/useUser";
 import { useNavigate } from "react-router-dom";
 import api from "../../services/api";
 
@@ -14,7 +13,6 @@ export default function Login() {
     password: "",
   });
   const { auth, signin } = useAuth();
-  const { setUser } = useUser();
 
   useEffect(() => {
     if (auth) {
@@ -32,8 +30,7 @@ export default function Login() {
     try {
       const { data } = await api.signin(user);
       signin(data.token);
-      setUser(data.user);
-      localStorage.setItem("user", JSON.stringify(data.user));
+      console.log(data);
       navigate("/admin-services");
     } catch (error) {
       console.log(error);
